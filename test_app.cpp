@@ -2,7 +2,7 @@
 
 static const std::string help_msg = 
 "Usage: ./testapp [-f <filename> -m <mode> {-v <keyword>}] | -h\n \
--m [word|checksum] -- -m 'word' print the 'keyword' count, required option -v, -m 'checksum' calculate 32bit checksum\n \
+-m [words|checksum] -- -m 'words' print the 'keyword' count, required option -v, -m 'checksum' calculate 32bit checksum\n \
 -h -- display help info\n";
 
 static const char* stringOpts = "f:m:v:h";
@@ -26,7 +26,7 @@ void test_app::parse_args (int argc, char* argv[]) {
 				if (NONE == programArgs.mode) {
 					std::string modeName(optarg);
 					if (0 == modeName.compare("words")) {
-						programArgs.mode = AppMode::WORD;
+						programArgs.mode = AppMode::WORDS;
 					} else if (0 == modeName.compare("checksum")) {
 						programArgs.mode = AppMode::CHECKSUM;
 					} else {

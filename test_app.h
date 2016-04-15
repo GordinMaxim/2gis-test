@@ -2,7 +2,6 @@
 #define _TEST_APP_H
 #include <vector>
 #include <cstdint>
-// #include <ios>
 #include <fstream>
 #include <ostream>
 #include <iostream>
@@ -10,7 +9,7 @@
 
 namespace test_app {
 
-enum AppMode { WORD, CHECKSUM, HELP, NONE };
+enum AppMode { WORDS, CHECKSUM, HELP, NONE };
 
 struct ParseArgs_t {
 	AppMode mode;

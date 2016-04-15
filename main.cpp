@@ -8,9 +8,9 @@ int main (int argc, char* argv[]) {
 	test_app::parse_args(argc, argv);
 
 	switch (programArgs.mode) {
-		case test_app::AppMode::WORD: {
+		case test_app::AppMode::WORDS: {
 			if (!programArgs.filename || !programArgs.keyword) {
-				test_app::print_message(std::cout, "mode WORD required filename and keyword\n");
+				test_app::print_message(std::cout, "mode 'words' required filename and keyword\n");
 				exit(0);
 			}
 			int count = test_app::count_words(programArgs.filename, programArgs.keyword);
@@ -26,7 +26,7 @@ int main (int argc, char* argv[]) {
 		}
 		case test_app::AppMode::CHECKSUM: {
 			if (!programArgs.filename) {
-				test_app::print_message(std::cout, "mode CHECKSUM required filename\n");
+				test_app::print_message(std::cout, "mode 'checksum' required filename\n");
 				exit(0);	
 			}
 			std::vector<char> bytebuf;
