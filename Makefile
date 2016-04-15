@@ -1,0 +1,17 @@
+CC=g++
+CFLAGS=-c -Wall
+LDFLAGS=
+SOURCES=main.cpp test_app.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=testapp
+
+all: $(SOURCES) $(EXECUTABLE)
+  
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm *.o $(EXECUTABLE)
