@@ -29,8 +29,11 @@ void test_app::parse_args (int argc, char* argv[]) {
 						programArgs.mode = AppMode::WORD;
 					} else if (0 == modeName.compare("checksum")) {
 						programArgs.mode = AppMode::CHECKSUM;
+					} else {
+						print_message(std::cout, "Uknown mode\n");
+						display_help();
 					}
-				}
+				} 
 				break;	
 			}
 			case 'h': {

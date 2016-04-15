@@ -20,7 +20,7 @@ int main (int argc, char* argv[]) {
 				test_app::print_message(std::cout, sstream.str());	
 			}
 			std::stringstream sstream;
-			sstream << count << " " << programArgs.keyword << " founded\n";
+			sstream << count << " '" << programArgs.keyword << "' founded\n";
 			test_app::print_message(std::cout, sstream.str());
 			break;
 		}
@@ -37,7 +37,7 @@ int main (int argc, char* argv[]) {
 			}
 			uint32_t checksum = test_app::calc_checksum(bytebuf);
 			std::stringstream sstream;
-			sstream << "Checksum of " << programArgs.filename << " - " << std::hex << checksum;
+			sstream << "Checksum of " << programArgs.filename << " - " << std::hex << checksum << '\n';
 			test_app::print_message(std::cout, sstream.str());
 			break;
 		}

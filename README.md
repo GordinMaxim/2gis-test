@@ -8,6 +8,8 @@ Usage: ./testapp [-f <filename> -m <mode> {-v <keyword>}] | -h
 -m [word|checksum] -- -m 'word' print the 'keyword' count, required option -v, -m 'checksum' calculate 32bit checksum
 -h -- display help info
 
+//checksum of Test.tst and Test1.tst equal, just hex view both files
+
 Installation:
 ============
 
